@@ -9,8 +9,7 @@ public class Search {
             int mid = (hi + lo) /2;
             if (x == a[mid]) {
                 return mid;
-            } else 
-            if (x < a[mid]) {
+            } else if (x < a[mid]) {
                 hi = mid - 1;
             } else {
                 lo = mid + 1;
