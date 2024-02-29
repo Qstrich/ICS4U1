@@ -1,9 +1,9 @@
 public class Search {
     public static void main(String[] args) {
-        int[] a = {13, 5, 6, 4};
-        System.out.println(sequentialSearch(a, 5));
+        int[] a = {4, 5, 6, 13};
+        System.out.println(binarySearch(a, 5));
     }
-    static int upper_bound(int[] a, int x) {
+    static int binarySearch(int[] a, int x) {
         int hi = a.length-1, lo = 0;
         while (lo < hi) {
             int mid = (hi + lo) /2;
