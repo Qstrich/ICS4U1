@@ -9,7 +9,7 @@ public class Sort {
             int j = i; 
             int temp = a[i];
             while (j > 0 && a[j-1] > temp) {
-                a[j] = a[j--];
+                a[j] = a[--j];
             }
             a[j] = temp;
         }
