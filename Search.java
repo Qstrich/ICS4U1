@@ -1,3 +1,9 @@
+/* 
+Name: Jason Medeiros
+Course: ICS4U1
+Teacher: Ms. Lam
+Description: Search an array for a value using sequential and binary search
+ */
 public class Search {
     public static void main(String[] args) {
         int[] a = {2, 3, 4, 5, 6, 13, 15, 18};
