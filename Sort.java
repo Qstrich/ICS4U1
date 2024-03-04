@@ -14,4 +14,15 @@ public class Sort {
             a[j] = temp;
         }
     }
+    static void selectionSort(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            int mini = i;
+            for (int j = i; j < a.length; j++) {
+                if (a[j] < a[mini]) mini = j;
+            }
+            int temp = a[i];
+            a[i] = a[mini];
+            a[mini] = temp;
+        }
+    }
 }
