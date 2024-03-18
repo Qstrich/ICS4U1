@@ -31,8 +31,7 @@ public class Sort {
                     a[i-1] = temp;
                 }
             }
-            l++;
-            r--;
+        r--;
         }
     }
     static void insertionSort(int[] a) {
