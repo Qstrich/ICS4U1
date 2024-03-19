@@ -1,12 +1,12 @@
 
 class Recursion {
     public static void main(String[] args) {
-        
+        System.out.println(gcd(18, 8));
     }   
     static int gcd(int n, int m) {
         if (n == m) return m;
         if (m > n) return gcd(n, m-n);
-        if (m < n) return gcd(n, m);
+        return gcd(m, n);
     } 
     static int square(int x) {
         if (x == 1) return 1;
