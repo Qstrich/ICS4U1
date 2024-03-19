@@ -19,5 +19,9 @@ class Recursion {
         if (x % y == 0) return false;
         return prime(x, y-1);
     }
+    static int pow(int x, int n) {
+        if (n % 2 == 0) return pow(x, n/2) * pow(x, n/2);
+        return pow(x, n/2) * pow(x, n/2) * x;
+    }
 
 }
