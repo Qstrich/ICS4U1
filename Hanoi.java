@@ -1,3 +1,8 @@
+/* Name: Jason Medeiros
+ * Course: ICS4U1
+ * Teacher: Ms.Lam
+ * Purpose: Hanoi problem
+ */
 
 class Hanoi {
     public static void main(String[] args) {

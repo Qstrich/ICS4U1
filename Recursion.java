@@ -1,7 +1,15 @@
+/* Name: Jason Medeiros
+ * Course: ICS4U1
+ * Teacher: Ms.Lam
+ * Purpose: Implement various recursive methods
+ */
 
 class Recursion {
     public static void main(String[] args) {
         System.out.println(gcd(18, 8));
+        System.out.println(square(3));
+        System.out.println(primeNumber(73));
+        System.out.println(pow(2, 8));
     }   
     static int gcd(int n, int m) {
         if (n == m) return m;
@@ -21,6 +29,7 @@ class Recursion {
         return prime(x, y-1);
     }
     static int pow(int x, int n) {
+        if (n == 1) return x;
         if (n % 2 == 0) return pow(x, n/2) * pow(x, n/2);
         return pow(x, n/2) * pow(x, n/2) * x;
     }
