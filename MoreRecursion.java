@@ -32,7 +32,7 @@ public class MoreRecursion {
         return Math.max(largest(list, start+1, end), list[start]);
     }
     static int binarySearch(int[] list, int x) {
-        return binarySearch(list, x, 0, a.length-1);
+        return binarySearch(list, x, 0, list.length-1);
     }
     static int binarySearch(int[] list, int x, int lo, int hi) {
         int mid = (hi + lo) /2;
