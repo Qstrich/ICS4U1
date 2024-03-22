@@ -5,7 +5,11 @@
  */
 public class MoreRecursion {
     public static void main(String[] args) {
-        countHanoi(3);
+        System.out.println(countHanoi(3));
+        printRow(3);
+        printTriangle(5);
+        System.out.println(largest(new int[]{1, 4, 5, 6, 7, 2}));
+        System.out.println(binarySearch(new int[]{1, 3, 4, 5, 6, 7, 10, 12}, 4));
     }
     static int countHanoi(int n) {
         if (n == 1) return 1;
@@ -21,8 +25,8 @@ public class MoreRecursion {
     }
     static void printTriangle(int n) {
         if (n < 1) return;
-        printRow(n);
         printTriangle(n-1);
+        printRow(n);
     }
     static int largest(int[] list) {
         return largest(list, 0, list.length-1);
