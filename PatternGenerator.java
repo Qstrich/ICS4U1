@@ -5,7 +5,7 @@ public class PatternGenerator {
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             System.out.println("The bit patterns are: ");
-            f(sc.nextInt(), sc.nextInt());
+            f("", sc.nextInt(), sc.nextInt());
             System.out.println();
         }
 
@@ -16,7 +16,7 @@ public class PatternGenerator {
             return;
         } 
         if (n == 0) return;
-        if (k > 0) f("1" + s, n-1, k--);
-        f("0", n-1, k);
+        if (k > 0) f(s + "1", n-1, k-1);
+        f(s + "0", n-1, k);
     }
 }
