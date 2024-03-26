@@ -11,6 +11,7 @@ public class Golf {
             clubs[i] = sc.nextInt();
         }
         System.out.println("The least number of shots is: " + f(clubs, N));
+        sc.close();
     }
     static int f(int[] clubs, int N) {
         if (N == 0) return 0;
