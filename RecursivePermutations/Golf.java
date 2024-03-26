@@ -10,9 +10,14 @@ public class Golf {
         for (int i = 0; i < C; i++) {
             clubs[i] = sc.nextInt();
         }
-        System.out.println("The least number of shots is: " f(clubs, N));
+        System.out.println("The least number of shots is: " + f(clubs, N));
     }
-    static int f(int[] clubs, int n) {
-        for (int i = 0; i < N) f(clubs, n);
+    static int f(int[] clubs, int N) {
+        if (N == 0) return 0;
+        int min = Integer.MAX_VALUE;
+        for (int c: clubs) {
+            if (N - c >= 0) min = Math.min(min, f(clubs, N - c) + 1);
+        }
+        return min;
     }
 }
