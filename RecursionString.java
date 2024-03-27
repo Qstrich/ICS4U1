@@ -26,8 +26,8 @@ class RecursionString {
         if (s1.isEmpty() && s2.isEmpty()) return true;
         if (s1.isEmpty() || s2.isEmpty()) return false;
         String vowels = "aeiouAEIOU";
-        if (vowels.indexOf(s1.charAt(0)) != -1) return equalsIgnoreVowel(s1.substring(1), s2.substring(0));
-        if (vowels.indexOf(s2.charAt(0)) != -1) return equalsIgnoreVowel(s1.substring(0), s2.substring(1));
+        if (vowels.indexOf(s1.charAt(0)) != -1) return equalsIgnoreVowel(s1.substring(1), s2);
+        if (vowels.indexOf(s2.charAt(0)) != -1) return equalsIgnoreVowel(s1, s2.substring(1));
         if (!(s1.charAt(0) + "").equalsIgnoreCase(s2.charAt(0) + "")) return false;
         return equalsIgnoreVowel(s1.substring(1), s2.substring(1));
     }
