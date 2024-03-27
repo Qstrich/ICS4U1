@@ -26,6 +26,6 @@ class RecursionString {
         return equalsIgnoreVowel(s1.substring(1), s2.substring(1));
     }
     public static String moveToEnd(String s, char x) {
-        
+        return "";
     }
 }
