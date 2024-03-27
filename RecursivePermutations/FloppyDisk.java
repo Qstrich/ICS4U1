@@ -11,14 +11,15 @@ public class FloppyDisk {
                 disk[i] = sc.nextInt();
             }
             //1440 
+            System.out.println(f(disk, 1440, 0));
         }
     }
-    static int f(int[] disk, int size) {
-        if (size <= 0) return 0;
-        int max = 0;
-        for (int d: disk) {
-            max = Math.max(max, f(disk, size - d)) + 1;
+    static int f(int[] disk, int size, int idx) {
+        if (size < 0) return Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i = idx; i < disk.length; i++) {
+            min = Math.min(min, f(disk, size - disk[i], i+1));
         }
-        return max;
+        return Math.min(min, size);
     }
 }
