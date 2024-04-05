@@ -1,12 +1,5 @@
 class RecursionString {
     public static void main(String[] args) {
-        System.out.println(length("hello"));
-        System.out.println(equalsIgnoreCase("hello", "HELLO"));
-        System.out.println(countChar("Hello", 'l'));
-        System.out.println(equalsIgnoreVowel("Hello", "Hell"));
-        System.out.println(moveToEnd("Jimmie", 'i'));
-        System.out.println(reverse("Hello"));
-        System.out.println(palindrome("anana"));
     }
     public static int length(String s) {
         if (s.isEmpty()) return 0;
@@ -24,17 +17,17 @@ class RecursionString {
     }
     public static boolean equalsIgnoreVowel(String s1, String s2) {
         if (s1.isEmpty() && s2.isEmpty()) return true;
-        if (s1.isEmpty() || s2.isEmpty()) return false;
         String vowels = "aeiouAEIOU";
-        if (vowels.indexOf(s1.charAt(0)) != -1) return equalsIgnoreVowel(s1.substring(1), s2);
-        if (vowels.indexOf(s2.charAt(0)) != -1) return equalsIgnoreVowel(s1, s2.substring(1));
+        if (!s1.isEmpty() && vowels.indexOf(s1.charAt(0)) != -1) return equalsIgnoreVowel(s1.substring(1), s2);
+        if (!s2.isEmpty() && vowels.indexOf(s2.charAt(0)) != -1) return equalsIgnoreVowel(s1, s2.substring(1));
+        if (s1.isEmpty() || s2.isEmpty()) return false;
         if (!(s1.charAt(0) + "").equalsIgnoreCase(s2.charAt(0) + "")) return false;
         return equalsIgnoreVowel(s1.substring(1), s2.substring(1));
     }
     public static String moveToEnd(String s, char x) {
         if (s.isEmpty()) return "";
-        if (s.charAt(0) == x) return s.substring(1) + x;
-        return s.charAt(0) + s.substring(1);
+        if (s.charAt(0) == x) return moveToEnd(s.substring(1), x) + x;
+        return s.charAt(0) + moveToEnd(s.substring(1), x);
     }
     public static String reverse (String s) {
         if (s.isEmpty()) return "";

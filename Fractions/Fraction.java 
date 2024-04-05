@@ -1,0 +1,7 @@
+public class Fraction {
+    int num;
+    int dem;
+    public double size() {
+        return Math.abs((double) num/dem);
+    }
+}

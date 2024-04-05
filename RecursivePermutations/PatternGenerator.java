@@ -13,7 +13,7 @@ public class PatternGenerator {
     }
     static void f(String s, int n, int k) {
         if (k == 0 && n == 0) {
-            System.out.println(s);
+            System.out. println(s);
             return;
         } 
         if (n == 0) return;
