@@ -3,9 +3,9 @@ package Fractions;
 public class Fraction {
     int num;
     int dem;
-    public class Fraction (int n, int d) {
-        num = n;
-        dem = d;
+    public class Fraction (int num, int dem) {
+        this.num = num;
+        this.dem = dem;
     }
     public double size() {
         return Math.abs((double) num/dem);
