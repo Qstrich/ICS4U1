@@ -1,6 +1,6 @@
 package Fractions;
 
-class Fraction {
+public class Fraction {
     int num;
     int dem;
     public class Fraction (int n, int d) {
