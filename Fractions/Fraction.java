@@ -31,6 +31,7 @@ public class Fraction {
         Fraction sum = new Fraction();
         sum.setDen(f.getDen() * den);
         sum.setNum(f.getDen() * num + f.getNum() * den);
+        sum.reduce();
         return sum;
     }
     public Fraction reduce() {
