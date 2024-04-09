@@ -3,6 +3,10 @@ package Fractions;
 class Fraction {
     int num;
     int dem;
+    public class Fraction (int n, int d) {
+        num = n;
+        dem = d;
+    }
     public double size() {
         return Math.abs((double) num/dem);
     }
