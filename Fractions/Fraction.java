@@ -1,4 +1,6 @@
-public class Fraction {
+package Fractions;
+
+class Fraction {
     int num;
     int dem;
     public double size() {
